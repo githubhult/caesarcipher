@@ -1,0 +1,24 @@
+def caesar_cipher(message, shift, opeartion):
+result = ""
+shift = shift if operation == 'encode" else -shift
+for char in message:
+if char.isalpha():
+ascii_offset = 65 if char.isupper() else 97
+new_char = chr((ord(char) - ascii_offset + shift % 26 + ascii_offset)
+result += char
+else:
+result +=char
+return result
+
+while True:
+operation + input("Type 'encode' to encrypt, type 'decode' to decrypt:\n").lower()
+message = input("Type your message\n")
+shift = int(input("Type the shift number:\n"))
+
+result = ceasar_cipher(message, shift, operation)
+print(str(result))
+
+repeat = input("do you want to repeat?(y/n)\n").lower()
+if repeat != 'y':
+print("OK byee!")
+break
